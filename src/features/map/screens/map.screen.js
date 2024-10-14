@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import MapView, { Marker, Callout, MapCallout } from "react-native-maps";
+import MapView, { Marker, Callout } from "react-native-maps";
 import styled from "styled-components";
 
 import { LocationContext } from "../../../services/location/location.context";
