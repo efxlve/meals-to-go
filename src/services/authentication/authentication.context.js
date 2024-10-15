@@ -1,32 +1,99 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useRef } from "react";
+
+import {
+    signOut,
+    createUserWithEmailAndPassword,
+    onAuthStateChanged,
+    getAuth,
+} from "firebase/auth";
 
 import { loginRequest } from "./authentication.service";
 
 export const AuthenticationContext = createContext();
 
 export const AuthenticationContextProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+    const [user, setUser] = useState(null);
     const [error, setError] = useState(null);
+    const auth = useRef(getAuth()).current;
 
-    const onLogin = (email, password) => {
-        loginRequest(email, password).then((u) => {
-            setUser(u);
+    const getFriendlyErrorMessage = (errorCode) => {
+        switch (errorCode) {
+            case "auth/invalid-email":
+                return "Invalid email address";
+            case "auth/user-not-found":
+                return "No user found with this email address";
+            case "auth/wrong-password":
+                return "Incorrect password entered";
+            case "auth/email-already-in-use":
+                return "This email address is already in use";
+            case "auth/weak-password":
+                return "Password is too weak, please choose a stronger password";
+            case "auth/too-many-requests":
+                return "Too many failed login attempts. Please try again later.";
+            default:
+                return "An error occurred. Please try again.";
+        }
+    };
+
+    onAuthStateChanged(auth, (usr) => {
+        if (usr) {
+            setUser(usr);
+            setIsLoading(false);
+        } else {
             setIsLoading(false);
         }
-        ).catch((e) => {
-            setIsLoading(false);
-            setError(e);
+    });
+
+    const onLogin = (email, password) => {
+        setIsLoading(true);
+        loginRequest(auth, email, password)
+            .then((u) => {
+                setUser(u);
+                setIsLoading(false);
+            })
+            .catch((e) => {
+                setIsLoading(false);
+                setError(getFriendlyErrorMessage(e.code));
+            });
+    };
+
+    const onRegister = (email, password, repeatedPassword) => {
+        setIsLoading(true);
+        if (password !== repeatedPassword) {
+            setError("Passwords do not match");
+            return;
+        }
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((u) => {
+                setUser(u);
+                setIsLoading(false);
+            })
+            .catch((e) => {
+                setIsLoading(false);
+                setError(getFriendlyErrorMessage(e.code));
+            });
+    };
+
+    const onLogout = () => {
+        signOut(auth).then(() => {
+            setUser(null);
+            setError(null);
         });
     };
 
     return (
-        <AuthenticationContext.Provider value={{
-            user,
-            isLoading,
-            error,
-            onLogin,
-        }}>
+        <AuthenticationContext.Provider
+            value={{
+                isAuthenticated: !!user,
+                user,
+                isLoading,
+                error,
+                onLogin,
+                onRegister,
+                onLogout,
+            }}
+        >
             {children}
         </AuthenticationContext.Provider>
     );
