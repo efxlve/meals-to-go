@@ -2,12 +2,11 @@ import React, { useState, createContext, useRef } from "react";
 
 import {
     signOut,
+    signInWithEmailAndPassword,
     createUserWithEmailAndPassword,
     onAuthStateChanged,
     getAuth,
 } from "firebase/auth";
-
-import { loginRequest } from "./authentication.service";
 
 export const AuthenticationContext = createContext();
 
@@ -47,7 +46,7 @@ export const AuthenticationContextProvider = ({ children }) => {
 
     const onLogin = (email, password) => {
         setIsLoading(true);
-        loginRequest(auth, email, password)
+        signInWithEmailAndPassword(auth, email, password)
             .then((u) => {
                 setUser(u);
                 setIsLoading(false);
