@@ -11,9 +11,9 @@ const Stack = createStackNavigator();
 export const AuthNavigator = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Account" component={AccountScreen} />
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="Register" component={RegisterScreen} />
-            <Stack.Screen name="Account" component={AccountScreen} />
         </Stack.Navigator>
     );
 };
