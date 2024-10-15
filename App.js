@@ -3,6 +3,8 @@ import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
 import { ThemeProvider } from "styled-components";
 
 import { initializeApp } from "firebase/app";
+import { initializeAuth, getReactNativePersistence } from "firebase/auth";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { useFonts as useOswald, Oswald_400Regular } from '@expo-google-fonts/oswald';
 import { useFonts as useLato, Lato_400Regular } from '@expo-google-fonts/lato';
@@ -10,9 +12,6 @@ import { useFonts as useLato, Lato_400Regular } from '@expo-google-fonts/lato';
 import { theme } from './src/infrastructure/theme';
 import { Navigation } from "./src/infrastructure/navigation";
 
-import { RestaurantsContextProvider } from "./src/services/restaurants/restaurants.context";
-import { LocationContextProvider } from "./src/services/location/location.context";
-import { FavouritesContextProvider } from "./src/services/favourites/favourites.context";
 import { AuthenticationContextProvider } from "./src/services/authentication/authentication.context";
 
 const firebaseConfig = {
@@ -24,7 +23,11 @@ const firebaseConfig = {
   appId: "1:448654409608:web:dd954e1d051f8b85a6043d"
 };
 
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+
+const auth = initializeAuth(app, {
+  persistence: getReactNativePersistence(AsyncStorage),
+});
 
 export default function App() {
   const [oswaldLoaded] = useOswald({
@@ -43,13 +46,7 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <AuthenticationContextProvider>
-          <FavouritesContextProvider>
-            <LocationContextProvider>
-              <RestaurantsContextProvider>
-                <Navigation />
-              </RestaurantsContextProvider>
-            </LocationContextProvider>
-          </FavouritesContextProvider>
+          <Navigation />
         </AuthenticationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
