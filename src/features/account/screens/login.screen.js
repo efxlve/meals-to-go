@@ -7,6 +7,7 @@ import {
     AuthButton,
     AuthInput,
     ErrorContainer,
+    Title,
 } from "../components/account.styles";
 
 import { Text } from "../../../components/typography/text.component";
@@ -20,6 +21,7 @@ export const LoginScreen = ({ navigation }) => {
 
     return (
         <AccountBackground>
+            <Title>Login</Title>
             <AccountCover />
             <AccountContainer>
                 <AuthInput
