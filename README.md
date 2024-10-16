@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://github.com/user-attachments/assets/ea882f06-970d-4521-82d9-3256183c482b" alt="Logo" width="150">
-  <h1 style="font-family: 'Arial', sans-serif;">Meals to Go!</h1>
+  <h1 style="font-family: 'Arial', sans-serif;">Meals to Go</h1>
   <p style="font-family: Arial, sans-serif;"><strong><span style="letter-spacing: 0.1em;">by Muharrem Efe Çayırbahçe</span></strong></p>
 </div>
 
