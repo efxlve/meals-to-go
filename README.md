@@ -1,4 +1,8 @@
-# Meals to Go
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ea882f06-970d-4521-82d9-3256183c482b" alt="Logo" width="150">
+  <h1 style="font-family: 'Arial', sans-serif;">Meals to Go!</h1>
+  <p style="font-family: Arial, sans-serif;"><strong><span style="letter-spacing: 0.1em;">by Muharrem Efe Çayırbahçe</span></strong></p>
+</div>
 
 A mobile application built with React Native, designed to provide users with a convenient way to search for restaurants and browse meal options. The app fetches real-time restaurant data using external APIs and displays details such as location, ratings, and meal offerings.
 
@@ -55,4 +59,4 @@ Feel free to fork this repository and submit pull requests to contribute to the 
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
