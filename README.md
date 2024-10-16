@@ -42,10 +42,10 @@ expo start
 
 ## Usage
 
-	-	After launching the app, search for restaurants using the search bar.
-	-	Tap on any restaurant to view its details.
-	-	Use the map view to see nearby restaurants.
-	-	Save your favorite restaurants for future visits.
+-	After launching the app, search for restaurants using the search bar.
+-	Tap on any restaurant to view its details.
+-	Use the map view to see nearby restaurants.
+-	Save your favorite restaurants for future visits.
 
 ## Screenshots
 
