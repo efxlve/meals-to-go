@@ -43,7 +43,7 @@ export const FavouritesScreen = ({ navigation }) => {
         </SafeArea>
     ) : (
         <NoFavouritesArea>
-            <Text>No favourites yet..</Text>
+            <Text>No favourites yet</Text>
         </NoFavouritesArea>
     );
 };
