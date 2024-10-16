@@ -55,7 +55,7 @@ expo start
 
 <details>
   <summary>Account</summary>
-  <img src="https://github.com/user-attachments/assets/55de2924-7320-499d-8d3a-3db5aa824eec" alt="Account">
+  <img width="507" src="https://github.com/user-attachments/assets/55de2924-7320-499d-8d3a-3db5aa824eec" alt="Account">
 </details>
 
 <details>
