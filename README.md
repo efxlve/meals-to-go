@@ -60,37 +60,37 @@ expo start
 
 <details>
   <summary>Login</summary>
-  <img src="" alt="Login">
+  <img width="320" src="https://github.com/user-attachments/assets/8348e0a3-6d86-4b84-a586-82b19dba8b3e" alt="Login">
 </details>
 
 <details>
   <summary>Register</summary>
-  <img src="" alt="Register">
+  <img width="320" src="https://github.com/user-attachments/assets/826e2afa-0dac-49df-9316-eeeeef0a3cec" alt="Register">
 </details>
 
 <details>
   <summary>Feed</summary>
-  <img src="" alt="Feed">
+  <img width="320" src="https://github.com/user-attachments/assets/52496c4f-6467-45c6-b719-68ffa4f11754" alt="Feed">
 </details>
 
 <details>
   <summary>Restaurant Details</summary>
-  <img src="" alt="details">
+  <img width="320" src="https://github.com/user-attachments/assets/4daf4b9a-c827-4c52-9339-692d8e8ef11b" alt="details">
 </details>
 
 <details>
   <summary>Map</summary>
-  <img src="" alt="Map">
+  <img width="320" src="https://github.com/user-attachments/assets/f21cfa0a-b818-4e0f-95be-b899f841e5f2" alt="Map">
 </details>
 
 <details>
   <summary>Settings</summary>
-  <img src="" alt="Settings">
+  <img width="320" src="https://github.com/user-attachments/assets/9488a995-aba6-45cd-b96a-e616153455af" alt="Settings">
 </details>
 
 <details>
   <summary>Favourites</summary>
-  <img src="" alt="Favourites">
+  <img width="320" src="https://github.com/user-attachments/assets/79114ecd-0e0f-4892-a511-07152358687e" alt="Favourites">
 </details>
 
 ## Contributing
