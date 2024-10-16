@@ -4,7 +4,7 @@
   <p style="font-family: Arial, sans-serif;"><strong><span style="letter-spacing: 0.1em;">by Muharrem Efe Çayırbahçe</span></strong></p>
 </div>
 
-A mobile application built with React Native, designed to provide users with a convenient way to search for restaurants and browse meal options. The app fetches real-time restaurant data using external APIs and displays details such as location, ratings, and meal offerings.
+A mobile application built with React Native, designed to provide users with a convenient way to search for restaurants and browse meal options. The app fetches restaurant data using and displays details such as location, ratings, and meal offerings.
 
 ## Features
 
