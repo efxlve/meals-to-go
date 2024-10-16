@@ -53,6 +53,46 @@ expo start
 
 ## Screenshots
 
+<details>
+  <summary>Account</summary>
+  <img src="https://github.com/user-attachments/assets/55de2924-7320-499d-8d3a-3db5aa824eec" alt="Account">
+</details>
+
+<details>
+  <summary>Login</summary>
+  <img src="" alt="Login">
+</details>
+
+<details>
+  <summary>Register</summary>
+  <img src="" alt="Register">
+</details>
+
+<details>
+  <summary>Feed</summary>
+  <img src="" alt="Feed">
+</details>
+
+<details>
+  <summary>Restaurant Details</summary>
+  <img src="" alt="details">
+</details>
+
+<details>
+  <summary>Map</summary>
+  <img src="" alt="Map">
+</details>
+
+<details>
+  <summary>Settings</summary>
+  <img src="" alt="Settings">
+</details>
+
+<details>
+  <summary>Favourites</summary>
+  <img src="" alt="Favourites">
+</details>
+
 ## Contributing
 
 Feel free to fork this repository and submit pull requests to contribute to the project.
